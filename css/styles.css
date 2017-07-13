@@ -1,0 +1,126 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .name-border {
+    text-align: center;
+    display: table;
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.ptext .desc-border {
+    text-align: center;
+    display: table;
+    font-size: .7em;
+    background-color: #001b69;
+    color: #fff;
+    padding: .7em;
+    margin: 0 auto;
+}
+
+.ptext .in-border {
+    background-color: #4e1f1c;
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext .us-border {
+    background-color: #060450;
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext .ib-buttons {
+    background-color: #111;
+    color: #fff;
+    padding: .7em;
+    display: inline-block;
+    font-size: .7em;
+    margin: 7px 0;
+}
+
+.ptext .ib-buttons a {
+  text-decoration: none;
+}
+
+.pimg1, .pimg2, .pimg3 {
+    position: relative;
+    opacity: 0.70;
+    background-size: cover;
+    background: no-repeat fixed center;
+}
+
+.pimg1 {
+    background-image: url('../img/code.jpeg');
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url('../img/flag.jpeg');
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url('../img/tampa.jpg');
+    min-height: 400px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+#li {
+  background-color: #0077b5;
+}
+
+#gh {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+#so {
+  background-color: #c86a1f;
+}
+
+#tw {
+  background-color: #1b95e0;
+}
+
+.li_a, .so_a, .tw_a, .fw_a {
+  color: #ffffff;
+}
+
+.gh_a {
+  color: #3a3a3a;
+}
