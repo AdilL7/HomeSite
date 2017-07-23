@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style>
+        body {
+            margin-top: 70px;
+            background: #333;
+            color: white;
+        }
+    </style>
+    <title>Converter</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+            <h1 class="display-4 text-center mb-3">Weight Converter</h1>
+            <h4 class="display-6 text-center mb-3">Pounds to grams, kilograms and ounces.</h4>
+
+            <form>
+                <div class="form-group">
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           placeholder="Enter weight in pounds"
+                           id="lbsInput"
+                    >
+                </div>
+            </form>
+
+            <div id="output">
+                <div class="card card-primary mb-2">
+                    <div class="card-block">
+                        <h4>Grams:</h4>
+                        <div id="gramsOutput"></div>
+                    </div>
+                </div>
+
+                <div class="card card-success mb-2">
+                    <div class="card-block">
+                        <h4>Kilograms:</h4>
+                        <div id="kgOutput"></div>
+                    </div>
+                </div>
+
+                <div class="card card-danger mb-2">
+                    <div class="card-block">
+                        <h4>Ounces:</h4>
+                        <div id="ozOutput"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    console.log("Connected!");
+    document.getElementById('output').style.visibility = 'hidden';
+
+    document.getElementById('lbsInput').addEventListener('input', function (e) {
+        document.getElementById('output').style.visibility = 'visible';
+        var pounds = e.target.value;
+        var grams = pounds * 453.592;
+        var kgs = pounds * 0.453592;
+        var oz = pounds * 16;
+        document.getElementById('gramsOutput').innerHTML = grams.toFixed(2);
+        document.getElementById('kgOutput').innerHTML = kgs.toFixed(2);
+        document.getElementById('ozOutput').innerHTML = oz.toFixed(2);
+
+        if (pounds === "") {
+            document.getElementById('output').style.visibility = 'hidden';
+        } else if (pounds < 0) {
+            document.getElementById('gramsOutput').innerHTML = "Error, number is negative.";
+            document.getElementById('kgOutput').innerHTML = "Error, number is negative.";
+            document.getElementById('ozOutput').innerHTML = "Error, number is negative.";
+        }
+    });
+</script>
+
+</body>
+</html>
