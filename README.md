@@ -1,3 +1,3 @@
 # HomeSite
 
-Source of my website, constantly being worked on. 
+Source of my website.
